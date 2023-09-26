@@ -13,16 +13,16 @@ function multiplicar(valor, vetor) {
 function multiplicaPor5(valor, vetor) {
   let vetorMult = [];
 
-  if (valor >= 5) {
     vetor.forEach((e) => {
-      vetorMult.push(valor * e);
-    });
-    return vetorMult;
-  } else {
-    return ` O valor é menor que 5`;
+      if (e > 5) {
+        vetorMult.push(e * valor)
+      } else {
+        vetorMult.push(e)
+      }
+    })
+return vetorMult
   }
-}
 
-console.log(multiplicar(3, vetor))
+// console.log(multiplicar(3, vetor))
 console.log(multiplicaPor5(3, vetor2));
-console.log(multiplicaPor5(5, vetor2));
+// console.log(multiplicaPor5(5, vetor2));
