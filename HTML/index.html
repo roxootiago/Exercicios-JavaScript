@@ -23,6 +23,8 @@
         <a href wm-nav="exercicios/texto1.html" target="_blank">01 - Texto1</a> |
         <a href wm-nav="exercicios/texto2.html" target="_blank">02 - Texto2</a> |
         <a href wm-nav="exercicios/listas.html" target="_blank">03 - Listas</a> |
+        <a href wm-nav="exercicios/listaAninhada.html?clicked=true" target="_blank">04 - Lista Aninhada</a> |
+        <a href wm-nav="exercicios/links.html" target="_blank">05 - Links</a> |
     </nav>
 
     <section id="conteudo"></section>
@@ -32,16 +34,29 @@
     </footer>
 
     <script>
-        document.querySelectorAll('[wm-nav]').forEach(link => {
+       document.querySelectorAll('[wm-nav]').forEach(link => {
             const conteudo = document.getElementById('conteudo');
             link.onclick = function (e) {
                 e.preventDefault();
+                const url = link.getAttribute('wm-nav');
 
-                fetch(link.getAttribute('wm-nav'))
+
+                fetch(url)
                     .then(resp => resp.text())
-                    .then(html => conteudo.innerHTML = html)
+                    .then(html => {
+                        conteudo.innerHTML = html;
+
+                        conteudo.querySelectorAll('script').forEach(scriptTag => {
+                            const script = document.createElement('script');
+                            script.textContent = scriptTag.textContent;
+                            document.body.appendChild(script);
+                        });
+                    });
             }
-        })
+        });
+
+            
+            
     </script>
 </body>
 
