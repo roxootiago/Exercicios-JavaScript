@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+</head>
+<body>
+    <h1>Formulário</h1>
+    <form  method="POST">
+
+        <input type="hidden" name="id" value="3">
+        <input type="text"  name="nome" >
+        <input type="password" name="senha" >
+        <textarea name="bio" cols="30" rows="10" id=""></textarea>
+        <div>
+            <input type="radio" name="tipo" id="" value="admin">Admin
+            <input type="radio" name="tipo" id="" value="regular">Regular
+            <input type="radio" name="tipo" id="" value="professor">Professor
+        </div>
+
+        <div>
+            <input type="checkbox" name="status" id="">Ativo
+        </div>
+
+        <select name="estado" id="">
+            <option value="ac">Acre</option>
+            <option value="ba">Bahia</option>
+            <option value="ce">Ceará</option>
+        </select>
+
+        <select name="interesses" multiple size="7">
+            <option value="js">JavaScript</option>
+            <option value="ts">TypeScript</option>
+            <option value="php">PHP</option>
+            <option value="java">Java</option>
+            <option value="python">Python</option>
+            <option value="c#">C#</option>
+        </select>
+
+        <button formaction="http://localhost:3003/usuarios">Incluir</button>
+        <button formaction="http://localhost:3003/usuarios/:id">Alterar</button>
+    </form>
+
+    <style>
+        input, textarea, select {display:block;
+            margin-bottom:10px}
+
+            input[type=radio], input[type=checkbox]{
+                display: inline;
+            }
+    </style>
+</body>
+</html>
