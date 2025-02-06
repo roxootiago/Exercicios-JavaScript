@@ -33,3 +33,30 @@
     margin: 10px  20px;
     /* medial e lateral */
 ~~~
+
+## Display
+
+### Block
+
+~~~css
+    display:block;
+    /* Trata o elemento como um bloco */
+
+    display: inline;
+    /* Trata o elemento com suas altura e largura originais*/
+
+    display: inline-block;
+    /* o elemento tem comportamente de inline mas irá herdar comportamentos da propriedade block  */
+~~~
+
+## Overflow
+
+~~~css
+    overflow: hidden;
+    /* caso ultrapasse a box do elemento vai ficar invisível */
+
+    overflow: scroll;
+    /* cria um scroll na box */
+    overflow-x: scroll;
+    /* cria um scroll naquele eixo na box */
+~~~
