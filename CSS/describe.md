@@ -31,7 +31,7 @@
     padding: 10px 10px 20px 20px;
     /* cima, direita, baixo, esquerda */
     margin: 10px  20px;
-    /* medial e lateral */
+    /* media  e lateral */
 ~~~
 
 ## Display
@@ -60,3 +60,37 @@
     overflow-x: scroll;
     /* cria um scroll naquele eixo na box */
 ~~~
+
+## Float
+~~~css
+    clear: both; /* limpa todas as formatações da propriedade float */
+~~~
+
+## Cores
+
+### Hexadecimal
+
+~~~css
+    color: #FF0000;
+    color: #abc;/* entende-se que é similar: #aabbcc */
+~~~
+
+### RGB
+
+~~~css
+    color: rgb(255, 0, 0);
+~~~
+
+## Unidades
+ ### Absolutos
+ - px
+ - cm 
+ - mm
+
+ ### Viewport
+ - vw (1 => 1/100)
+ - vh (1 => 1/100)
+
+ ### Fontes
+ - rem
+ - em
